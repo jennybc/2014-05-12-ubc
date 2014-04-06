@@ -13,22 +13,33 @@ registration: restricted (?)
 instructor: ["Jenny Bryan", "and friends"]
 contact: admin@software-carpentry.org
 ---
-<!--
-    Edit the values in the parameter block above to be appropriate for your bootcamp.
-    Please use three-letter month names for the 'humandate' field.
--->
+<div class="row-fluid">
+  <div class="span5">
+    <p><a href="http://bioinformatics.ca"><img src="bioinformatics.ca.png" alt="bioinformatics.ca logo" /></a></p>
+  </div>
+  <div class="span7">
+    <h2>General Information</h2>
+    <p>
+      <a href="http://software-carpentry.org">Software Carpentry</a>'s mission
+      is to help scientists and engineers become more productive
+      by teaching them basic lab skills for computing
+      like program design, version control, data management, and task automation.
+      This two-day hands-on bootcamp will cover basic concepts and tools;
+      participants will be encouraged to help one another
+      and to apply what they have learned to their own research problems.
+    </p>
+    <p>
+      This workshop is aimed at graduate students, post-docs, and other researchers
+      intending to do workshops this summer through <a href="http://bioinformatics.ca/">bioinformatics.ca</a>.
+      To register,
+      please visit
+      <a href="https://bioinformatics.ca/workshops/2014/software-carpentry-scientific-computing-doesn%E2%80%99t-have-hurt-2014">this page</a>
+      on the <a href="http://bioinformatics.ca">bioinformatics.ca</a> web site.
+    </p>
+  </div>
+</div>
 
-<h2>General Information</h2>
-
-<p>
-  <a href="http://software-carpentry.org">Software Carpentry</a>'s mission
-  is to help scientists and engineers become more productive
-  by teaching them basic lab skills for computing
-  like program design, version control, data management, and task automation.
-  This two-day hands-on bootcamp will cover basic concepts and tools;
-  participants will be encouraged to help one another
-  and to apply what they have learned to their own research problems.
-</p>
+<h2>Details</h2>
 
 <!-- This block displays the instructors' names if they are available. -->
 {% if page.instructor %}
@@ -37,16 +48,6 @@ contact: admin@software-carpentry.org
   {{page.instructor | join: ', ' %}}
 </p>
 {% endif %}
-
-<!--
-    Modify this block to reflect the target audience for your bootcamp.
-    In particular, if it is only open to people from a particular institution,
-    or if specialized prerequisite knowledge is required, please mention that.
--->
-<p>
-  <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
-</p>
 
 <!--
     This block displays the address and links to a map showing directions.
