@@ -6,9 +6,6 @@ title: Setup Instructions
 These instructions are intended to help learners set up their computers.
 Instructors should go through them *before* class starts.
 
-{% include setup.html %}
-
-
 <p>
   <strong>Warning:</strong> Setup instructions are currently set to a
   standard, "kitchen sink" default. Learners will not need all of the
