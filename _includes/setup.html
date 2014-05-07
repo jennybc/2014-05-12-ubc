@@ -7,14 +7,8 @@
       When you're writing code, it's nice to have a text
       editor that is optimized for writing code, with features
       like automatic color-coding of key words.
-      The default text editor on Mac OS X and Linux is usually set to Vim,
-      which is not famous for being intuitive.
-      if you accidentally find yourself stuck in it,
-      try typing the escape key,
-      followed by ':q!' (colon, lower-case 'q', exclamation mark),
-      then hitting Return
-      to return to the shell.
-    </p>
+      In this specific boot camp, the <a href="http://www.rstudio.com/">RStudio IDE</a> provides a suitable text editor. It is, of course, optimized for writing R code, but will also suffice for other purposes, such as writing a Bash shell script. Below we give standard SWC advice for general purpose text editors, if you wish to install one for the future.
+      </p>
     <h4>The Bash Shell</h4>
     <p>
       Bash is a commonly-used shell. Using a shell gives you
@@ -32,17 +26,10 @@
     </p>
     <h4>R</h4>
     <p>
-      R is a programming language that specializes in statistical
-      computing. It is a powerful tool for exploratory data analysis. To
+      <a href="http://www.r-project.org">R</a> is a programming language that is especially strong for statistical analysis and visualization. To
       interact with R, we will
       use <a href="http://www.rstudio.com/">RStudio</a>, an interactive
       development environment (IDE).
-    </p>
-    <h4>SQL</h4>
-    <p>
-      SQL is a specialized programming language used with databases.
-      We use a simple database manager called <a href="http://www.sqlite.org/">SQLite</a>,
-      either directly or through a browser plugin.
     </p>
   </div>
 </div>
@@ -62,26 +49,9 @@
     </p>
     <h4>Git Bash</h4>
     <p>
-      Install Git for Windows by download and running
+      Install Git for Windows by downloading and running
       <a href="https://msysgit.googlecode.com/files/Git-1.8.4-preview20130916.exe">the installer</a>.
       This will provide you with both Git and Bash in the Git Bash program.
-    </p>
-  </div>
-  <div class="span6">
-    <h4>R</h4>
-    <p>
-      Install R by downloading and running
-      <a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-      from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-      Also, please install the
-      <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-    </p>
-    <h4>SQLite</h4>
-    <p>
-      Download the <a href="http://files.software-carpentry.org/sqlite3.exe">sqlite3 program</a>
-      and put it in the directory where you are running examples.
-      Alternatively,
-      you may install the Firefox SQLite browser plugin described <a href="#firefox-sqlite">below</a>.
     </p>
   </div>
 </div>
@@ -113,20 +83,7 @@
       Install Git for Mac by download and running
       <a href="http://git-scm.com/downloads">the installer</a>.
     </p>
-    <h4>R</h4>
-    <p>
-      Install R by downloading and running
-      <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-      from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-      Also, please install the
-      <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-    </p>
-    <h4>SQLite</h4>
-    <p>
-      <code>sqlite3</code> comes pre-installed on Mac OS X.
-      Alternatively,
-      you may install the Firefox SQLite browser plugin described <a href="#firefox-sqlite">below</a>.
-    </p>
+    
   </div>
 </div>
 
@@ -154,57 +111,5 @@
       which should be pre-installed.
     </p>
   </div>
-  <div class="span6">
-    <h4>R</h4>
-    <p>
-      You can download the binary files for your distribution
-      from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
-      you can use your package manager, e.g. for Debian/Ubuntu
-      run <code>apt-get install r-base</code>. Also, please install
-      the
-      <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-    </p>
-    <h4>SQLite</h4>
-    <p>
-      <code>sqlite3</code> comes pre-installed on Linux.
-      Alternatively,
-      you may install the Firefox SQLite browser plugin described <a href="#firefox-sqlite">below</a>.
-    </p>
-  </div>
-</div>
-
-<h3>Miscellaneous</h3>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h4 id="firefox-sqlite">Firefox SQLite Plugin</h4>
-    <p>
-      Instead of using <code>sqlite3</code> from the command line,
-      you may use <a href="https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/">this plugin</a>
-      for Firefox instead.
-      To install it:
-    </p>
-    <ul>
-      <li>
-	Start Firefox.
-      </li>
-      <li>
-	Go to the <a href="https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/">plugin homepage</a>.
-      </li>
-      <li>
-	Click the "Add Now" button.
-      </li>
-      <li>
-	Click "Install Now" on the dialog that appears after the download completes.
-      </li>
-      <li>
-	Restart Firefox when prompted.
-      </li>
-      <li>
-	Select "SQLite Manager" from the "Tools" menu.
-      </li>
-    </ul>
-  </div>
-  <div class="span6">
-  </div>
+  
 </div>
