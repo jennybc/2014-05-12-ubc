@@ -4,4 +4,4 @@ root: .
 title: Setup Instructions
 ---
 
-{% include setup/overview-r.html %}
+{% include setup %}
