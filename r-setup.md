@@ -4,9 +4,6 @@ root: .
 title: R and RStudio Set Up Instructions
 ---
 
-R and RStudio Set Up
-========================================================
-
 ## R and RStudio
 
   * Download and install [R, a free software environment for statistical computing and graphics](http://www.r-project.org) from [CRAN](http://cran.rstudio.com), the Comprehensive R Archive Network. It is __highly recommended__ to install a precompiled binary distribution for your operating system -- use the links up at the top of the CRAN page linked to above!
