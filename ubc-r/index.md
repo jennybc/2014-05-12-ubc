@@ -1,25 +1,20 @@
 ---
 layout: lesson
 root: ../
-title: R, May 2014 bioinformatics.ca Software Carpentry Bootcamp @ UBC
-raw: raw.github.com/swcarpentry/bc/gh-pages
+title: Session content
 ---
 
-[http://tiny.cc/??](http://tiny.cc/??) points to this page *should I do this again?*
+Links *should I tiny URL these  ?*
 
-[http://tiny.cc/??](http://tiny.cc/??) points to the Github repository the instructors will use during the bootcamp *need to get the tiny URL*
+  * Main landing page for boot camp: [http://jennybc.github.io/2014-05-12-ubc/](http://jennybc.github.io/2014-05-12-ubc/)
+  * This page: [http://jennybc.github.io/2014-05-12-ubc/ubc-r/](http://jennybc.github.io/2014-05-12-ubc/ubc-r/) 
+  * GitHub repository that makes our boot camp website and holds all official SWC lesson material: [https://github.com/jennybc/2014-05-12-ubc](https://github.com/jennybc/2014-05-12-ubc)
+  * GitHub repository the instructors will develop during the boot camp: 
+[https://github.com/jennybc/bioinformatics.ca-swc-r](https://github.com/jennybc/bioinformatics.ca-swc-r)
+  * The GapMinder data excerpt: [http://tiny.cc/gapminder](http://tiny.cc/gapminder)
+  * Our __public__ digital whiteboard: [https://etherpad.mozilla.org/ubc-r](https://etherpad.mozilla.org/ubc-r)
 
-[http://tiny.cc/??](http://tiny.cc/??) points to the Github repository that makes this entire website and holds all official SWC lesson material *need to get the tiny URL*
-
-CORRECTION (?): the actual Github repository instructors will work with during the bootcamp: [https://github.com/LJWilliams/UW-R](https://github.com/LJWilliams/UW-R)
-
-[http://tiny.cc/gapminder](http://tiny.cc/gapminder) points to the Gapminder data we'll use
-
-[Etherpad](https://2014-03-17-uw.etherpad.mozilla.org/2) link
-
-[Slides for git intro](http://jennybc.github.io/2014-01-27-miami/lessons/git-slides/git-intro.slides.html#/)
-
-We will write R code together "live" in the sessions, but below I link to written content on most topics, for your future reference.
+We will write R code together "live" in the sessions, but below I link to written content on some topics, for your future reference.
 
 Session 1.1: Basics of the R working environment and language
 
@@ -48,6 +43,7 @@ Session 2.3: Data aggregation, including plyr
 
   - [`plyr` webpage](http://plyr.had.co.nz)
   - [Data aggregation](http://www.stat.ubc.ca/~jenny/STAT545A/block04_dataAggregation.html) -- [source](https://github.com/jennybc/STAT545A/blob/master/block04_dataAggregation.rmd)
+  - [Data aggregation section](http://www.ugrad.stat.ubc.ca/~stat540/seminars/seminar04_compileNotebook-dataAggregation-twoGroupComparison.html#what-is-data-aggregation) of a tutorial from [STAT 540](http://www.ugrad.stat.ubc.ca/~stat540/)
 
 Session 2.4: Creating workflows and automated pipelines
 
