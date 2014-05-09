@@ -18,10 +18,12 @@ We will write R code together "live" in the sessions, but below I link to writte
 
 Session 1.1: Basics of the R working environment and language
 
+  - Slides: [slides/session01_bootcamp-deep-thoughts.pdf](slides/session01_bootcamp-deep-thoughts.pdf)
   - [R basics, workspace and working directory, RStudio projects](http://www.stat.ubc.ca/~jenny/STAT545A/block01_basicsWorkspaceWorkingDirProject.html) -- [source](https://github.com/jennybc/STAT545A/blob/master/block01_basicsWorkspaceWorkingDirProject.rmd)
   
 Session 1.2: Care and feeding of R objects
 
+  - Slides: [slides/session02_objects.pdf](slides/session02_objects.pdf)
   - [Basic care and feeding of data in R](http://www.stat.ubc.ca/~jenny/STAT545A/block02_careFeedingData.html) -- [source](https://github.com/jennybc/STAT545A/blob/master/block02_careFeedingData.rmd)
   - [R objects (beyond data.frames) and indexing](http://www.stat.ubc.ca/~jenny/STAT545A/block03_basicObjects.html) -- [source](https://github.com/jennybc/STAT545A/blob/master/block03_basicObjects.rmd)
 
@@ -29,6 +31,7 @@ Session 1.3: Version control, introduction
 
 Session 1.4: Making figures using `ggplot2`
 
+  - Slides: [slides/session04_ggplot2.pdf](slides/session04_ggplot2.pdf)
   - [http://docs.ggplot2.org/](http://docs.ggplot2.org/current/)
   - [Overview of the R graphics landscape](http://www.stat.ubc.ca/~jenny/STAT545A/block90_baseLatticeGgplot2.html)
   - [Taking control of qualitative colors in `ggplot2`](http://www.stat.ubc.ca/~jenny/STAT545A/block17_colorsGgplot2Qualitative.html)
@@ -41,12 +44,14 @@ Session 2.2: Version control, cont'd
 
 Session 2.3: Data aggregation, including plyr
 
+  - Slides: [slides/session07_dataAggregation.pdf](slides/session07_dataAggregation.pdf)
   - [`plyr` webpage](http://plyr.had.co.nz)
   - [Data aggregation](http://www.stat.ubc.ca/~jenny/STAT545A/block04_dataAggregation.html) -- [source](https://github.com/jennybc/STAT545A/blob/master/block04_dataAggregation.rmd)
   - [Data aggregation section](http://www.ugrad.stat.ubc.ca/~stat540/seminars/seminar04_compileNotebook-dataAggregation-twoGroupComparison.html#what-is-data-aggregation) of a tutorial from [STAT 540](http://www.ugrad.stat.ubc.ca/~stat540/)
 
 Session 2.4: Creating workflows and automated pipelines
 
+  - Slides: [slides/session08_pipeline.pdf](slides/session08_pipeline.pdf)
   - [Getting data out of R](http://www.stat.ubc.ca/~jenny/STAT545A/block05_getNumbersOut.html) -- [source](https://github.com/jennybc/STAT545A/blob/master/block05_getNumbersOut.rmd)
   - [Writing figures to file](http://www.stat.ubc.ca/~jenny/STAT545A/topic12_writeFigureToFile.html) -- [source](https://github.com/jennybc/STAT545A/blob/master/topic12_writeFigureToFile.rmd)
   - [An introduction to `Make`](http://kbroman.github.io/minimal_make/) by Karl Broman, aimed at stats / data science types
