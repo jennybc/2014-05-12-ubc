@@ -7,12 +7,4 @@ Remember the website comes from the `gh-pages` branch.
 
 The rendered website is here: [https://jennybc.github.io/2014-05-12-ubc](https://jennybc.github.io/2014-05-12-ubc)
 
-7.  Edit `index.html` to create the bootcamp home page (see below).
-    Please double-check the information in the page's header (described below),
-    as it is used to update the main website.
-
-10. Push content to your YYYY-MM-DD-site repository:
-
-    ~~~
-    git push origin gh-pages
-    ~~~
+The instructors will develop a repository as the boot camps unfolds here: [https://github.com/jennybc/bioinformatics.ca-swc-r](https://github.com/jennybc/bioinformatics.ca-swc-r)
