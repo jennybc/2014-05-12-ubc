@@ -26,3 +26,4 @@ lessons/misc-r/full-R-bootcamp/data-manipulation/03-split-apply.md
 lessons/misc-r/full-R-bootcamp/testing-documentation/testing.md
 .Rproj.user
 *.Rproj
+.RData
