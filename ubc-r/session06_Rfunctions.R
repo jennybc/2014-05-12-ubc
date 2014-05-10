@@ -57,7 +57,7 @@ reportGDP <- function(gdp){
   mgdp <- paste0( "$", mgdp, " x 10^3" ) 
   return(mgdp)
 }
-reportGPD( gDat$gdpPercap)
+reportGDP( gDat$gdpPercap)
 
 
 
