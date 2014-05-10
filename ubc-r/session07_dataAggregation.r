@@ -1,16 +1,37 @@
 library(ggplot2)
 
+setwd("~/teaching//swc//2014-05-12-ubc//ubc-r")
+
 gDat <- read.delim("gapminderDataFiveYear.txt")
 str(gDat)
 
 ## built-in apply() function operates on a MATRIX, not a data.frame
+## so we must make one!
+
+## challenge: get the life expectancy data for three countries (eg cambodia,
+## canada, rwanda) in a MATRIX, one column per country; make sure column names
+## give country and rownames give year
+
+## "brute force"
 tDat <- with(gDat,
-             cbind(cambodia = lifeExp[country == "Cambodia"],
-                   canada = lifeExp[country == "Canada"],
-                   rwanda = lifeExp[country == "Rwanda"]))
+             cbind(Cambodia = lifeExp[country == "Cambodia"],
+                   Canada = lifeExp[country == "Canada"],
+                   Rwanda = lifeExp[country == "Rwanda"]))
 rownames(tDat) <- with(gDat, year[country == "Canada"])
 str(tDat)
 tDat
+
+## reshape2
+library(reshape2)
+tmp <- acast(subset(gDat,
+                    subset = country %in% c("Cambodia", "Canada", "Rwanda")),
+             year ~ country, value.var = "lifeExp")
+## or using acast()-native subsetting:
+acast(gDat, subset = . (country %in% c("Cambodia", "Canada", "Rwanda")),
+      year ~ country, value.var = "lifeExp")
+
+## see, we get the same thing!
+identical(tDat, tmp)
 
 apply(tDat, 1, mean)
 apply(tDat, 2, median) # note payoff from good dimnames
@@ -92,3 +113,4 @@ leSlopeByCont <-
         function(z) c(minSlope = min(z$slope), medSlope = median(z$slope),
                       maxSlope = max(z$slope)))
 leSlopeByCont
+
