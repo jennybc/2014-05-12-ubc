@@ -1,9 +1,7 @@
-library(ggplot2)
-
 setwd("~/teaching//swc//2014-05-12-ubc//ubc-r")
 
 gDat <- read.delim("gapminderDataFiveYear.txt")
-str(gDat)
+str(gDat) # 'data.frame':  1704 obs. of  6 variables:
 
 ## built-in apply() function operates on a MATRIX, not a data.frame
 ## so we must make one!
@@ -21,8 +19,9 @@ rownames(tDat) <- with(gDat, year[country == "Canada"])
 str(tDat)
 tDat
 
-## reshape2
+## reshape2 -- worth learning for future
 library(reshape2)
+library(plyr) # to use '.' to quote an expression
 tmp <- acast(subset(gDat,
                     subset = country %in% c("Cambodia", "Canada", "Rwanda")),
              year ~ country, value.var = "lifeExp")
@@ -33,12 +32,14 @@ acast(gDat, subset = . (country %in% c("Cambodia", "Canada", "Rwanda")),
 ## see, we get the same thing!
 identical(tDat, tmp)
 
+## now we have the matrix and can demo apply()
 apply(tDat, 1, mean)
 apply(tDat, 2, median) # note payoff from good dimnames
 rowMeans(tDat) # FAST use for big datasets
 which.min(tDat[1, ])
 apply(tDat, 1, which.min)
 colnames(tDat)[apply(tDat, 1, which.min)]
+data.frame(tDat, min_country = colnames(tDat)[apply(tDat, 1, which.min)])
 apply(tDat, 2, summary)
 apply(tDat, 2, quantile, probs = c(0.25, 0.75))
 
@@ -63,13 +64,15 @@ library(plyr)
 ## let's run linear regression of lifeExp on year for individual countries and
 ## save the estimated intercept and slope
 
-## walk before you run ....
+## walk before you run .... and make a plot first!
+library(ggplot2)
 ggplot(subset(gDat, country == "Zimbabwe"),
        aes(x = year, y = lifeExp)) +
   geom_point() + geom_smooth(se = FALSE, method = "lm")
 
 lm(lifeExp ~ year, gDat, subset = country == "Zimbabwe")
 
+## let's make the intercept more interpretable
 (yearMin <- min(gDat$year))
 lm(lifeExp ~ I(year - yearMin), gDat, subset = country == "Zimbabwe")
 jFit <- lm(lifeExp ~ I(year - yearMin), gDat, subset = country == "Zimbabwe")
@@ -81,6 +84,7 @@ jFun <- function(z) {
   names(jCoef) <- c("intercept", "slope")
   return(jCoef)
 }
+## we are being a bit naughty when we use yearMin from the calling environment
 
 ## test your function!
 jFun(subset(gDat, country == "Zimbabwe"))
@@ -114,3 +118,20 @@ leSlopeByCont <-
                       maxSlope = max(z$slope)))
 leSlopeByCont
 
+## data aggregation activities to leave many file behind as fodder for shell
+## session
+
+d_ply(gDat, ~ country, function(z) {
+  the_country <- z$country[1]
+  the_continent <- z$continent[1]
+  
+  the_filename <- paste0(the_continent, "_", the_country, ".tsv")
+  write.table(z, file = the_filename,
+              quote = FALSE, sep = "\t", row.names = FALSE)
+  
+  the_filename <- paste0(the_continent, "_", the_country, ".png")
+  ggplot(z, aes(x = year, y = lifeExp)) +
+    geom_point() + geom_smooth(se = FALSE, method = "lm") +
+    ggtitle(the_country)
+  ggsave(the_filename)
+})
