@@ -135,3 +135,7 @@ d_ply(gDat, ~ country, function(z) {
     ggtitle(the_country)
   ggsave(the_filename)
 })
+
+file.remove(Sys.glob(paste0(unique(with(gDat,
+                                        paste0(continent, "_",
+                                               country))),".*")))
