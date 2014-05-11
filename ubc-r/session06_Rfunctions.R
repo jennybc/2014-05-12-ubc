@@ -1,15 +1,36 @@
-## repeat several operations with a single command
+## Suppose we want to take a data set, fit a linear 
+## model, and extract an intercept and a slope. Perhaps
+## isn't too hard for one data set (couple lines of codes?), 
+## but what if we want to repeat this for each 
+## country's data in the gapminder dataset and there are
+## 142 countries...
+
+## let's see how this can be done on one data set
+setwd("C:/Users/Andy/Desktop/2014-05-12-ubc/ubc-r/")
 gDat <- read.delim("gapminderDataFiveYear.txt")
 str(gDat) # 'data.frame':  1704 obs. of  6 variables:
-## daily routine to report mean in thousands: $7 X 10^3
-mgdp <- mean(gDat$gdpPercap)/1000
-mgdp <- sprintf("%.1f",mgdp )
-mgdp <- paste0( "$", mgdp, " x 10^3" ) 
-mgdp
-## what happens if you have 100 files to be summarized?
+fit <- lm( lifeExp ~ year, data=gDat)
+fit
+coef(fit)
+fit.coef <- coef(fit)
+names(fit.coef) <- c("intercept","slope")
+fit.coef 
 
 
 
+## exercise
+## repeat above but only for country "Spain"
+## hint: try using the subset argument in lm
+## lm( ..., subset=...)
+fit <- lm( lifeExp ~ year, data=gDat, subset=country=="Spain")
+fit.coef <- coef(fit)
+names(fit.coef) <- c("intercept","slope")
+fit.coef 
+## we will turn this into a function that takes 
+## country as an argument...
+
+
+## intro
 ## create a function that adds a pair of numbers
 f <- function(x, y){
   z <- x + y
@@ -47,18 +68,19 @@ f(1, 3)
 f(10, 5)
 
 
-## exercise
-## create a function called reportGPD that takes gdp
-## and returns a formatted mean
-reportGDP( gDat$gdpPercap) # function not created yet
-reportGDP <- function(gdp){
-  mgdp <- mean(gdp)/1000
-  mgdp <- sprintf("%.1f",mgdp )
-  mgdp <- paste0( "$", mgdp, " x 10^3" ) 
-  return(mgdp)
-}
-reportGDP( gDat$gdpPercap)
 
+## exercise
+## create a function called fun that calculates 
+## bmi from a given wgt (kg) and hgt (m)
+## note: bmi = wgt/hgt^2
+## note: make sure give the function a good name
+hgtwgt_to_bmi(hgt, wgt)
+hgtwgt_to_bmi <- function(hgt, wgt){
+  bmi <- wgt/hgt^2
+  return(bmi)
+}
+hgtwgt_to_bmi(1.8, 65)
+hgtwgt_to_bmi(1.8, c(70,80,90))
 
 
 
@@ -82,20 +104,26 @@ f(1, 2)
 f(5, 7)
 
 
+
+
 ## exercise
-## modify reportGDP function that also calculates and 
-## returns the median gpd in the same format as a list
-reportGDP <- function(gdp){
-  mgdp <- mean(gdp)/1000
-  mgdp <- sprintf("%.1f",mgdp )
-  mgdp <- paste0( "$", mgdp, " x 10^3" ) 
-  
-  mdgdp <- median(gdp)/1000
-  mdgdp <- sprintf("%.1f",mdgdp )
-  mdgdp <- paste0( "$", mdgdp, " x 10^3" )  
-  return( list(mean=mgdp, median=mdgdp ) )
+## go back to our original goal and create a function
+## called lmcountry that takes a country's name,
+## fit a linear model of lifeExp vs year and a return
+## a list of intercept and slope
+## hint: try go back and copy and paste stuff inside the function
+fit <- lm( lifeExp ~ year, data=gDat, subset=country=="Spain")
+fit.coef <- coef(fit)
+names(fit.coef) <- c("intercept","slope")
+fit.coef 
+
+lmcountry(country.name) ## return a list
+lmcountry <- function(country.name){
+  fit <- lm( lifeExp ~ year, data=gDat, subset=country==country.name)
+  fit.coef <- coef(fit)
+  return( list(intercept=fit.coef[1], slope=fit.coef[2]) )
 }
-reportGDP( gDat$gdpPercap)
+lmcountry("Spain")
 
 
 
@@ -111,20 +139,24 @@ f(17, 18)
 
 
 
+
 # documentation 
-reportGDP # what does this function does?
+hgtwgt_to_bmi # what does this function does?
+lmcountry # what does this function does?
 # function should always be annotated
-reportGDP <- function(gdp){
-  ## input: vector of gdp 
-  ## output: return a list of mean and median in thousands
-  mgdp <- mean(gdp)/1000
-  mgdp <- sprintf("%.1f",mgdp )
-  mgdp <- paste0( "$", mgdp, " x 10^3" ) 
-  
-  mdgdp <- median(gdp)/1000
-  mdgdp <- sprintf("%.1f",mdgdp )
-  mdgdp <- paste0( "$", mdgdp, " x 10^3" )  
-  return( list(mean=mgdp, median=mdgdp ) )
+hgtwgt_to_bmi <- function(hgt, wgt){
+  ## input: hgt (in meter), wgt (in kg)
+  ## output: bmi (in kg/m^2)
+  bmi <- wgt/hgt^2
+  return(bmi)
 }
-reportGDP
+hgtwgt_to_bmi ## ah, now I know what does function is about
+
+
+## exercise
+## create some simple function of your own
+## e.g., area of a circle, make annotation
+## and then let your neighbour read your function
+## to see if they understand what the function 
+## is about without reading the code
 
