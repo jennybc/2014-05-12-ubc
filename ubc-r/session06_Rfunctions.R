@@ -36,10 +36,17 @@ f <- function(x, y){
   z <- x + y
   return(z)
 }
+
+f <- function(x, y){
+  z <- x + y
+  z <- z * 5
+  return(z)
+}
 f # entire function
 body(f) # body of a function
 formals(f) # a formal list of arguments
 args(f) # a more human readable list of arguments
+## what does it return?
 f(1, 2)
 f(10, 1)
 f(999, -10)
@@ -56,16 +63,6 @@ f(1, 2)
 
 
 
-
-## more complicated operations in body
-f <- function(x, y){
-  z <- x + y
-  z <- z * 5
-  return(z)
-}
-## what does it return?
-f(1, 3)
-f(10, 5)
 
 
 
@@ -141,8 +138,8 @@ f(17, 18)
 
 
 # documentation 
-hgtwgt_to_bmi # what does this function does?
-lmcountry # what does this function does?
+hgtwgt_to_bmi # what does this function do?
+lmcountry # what does this function do?
 # function should always be annotated
 hgtwgt_to_bmi <- function(hgt, wgt){
   ## input: hgt (in meter), wgt (in kg)
