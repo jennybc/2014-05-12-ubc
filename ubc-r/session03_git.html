@@ -172,6 +172,12 @@ distributed version control system.</p>
 <p>Mac OS 10.9 Mavericks comes with git installed. To check that git is installed,
 open a Terminal and run…</p>
 
+<pre><code class="sh">which git
+git --version
+</code></pre>
+
+<p>These commands should display something similar to this:</p>
+
 <pre><code class="sh">➜  which git
 /usr/bin/git
 ➜  git --version
@@ -180,6 +186,24 @@ git version 1.9.3
 
 <p>For all other operating systems, go to the <a href="http://git-scm.com/downloads">Git downloads</a> web
 site, and click on the appropriate icon for your operating system.</p>
+
+<p>If on a Mac the official Git package gives you any trouble, use the following
+instructions to install Git using Homebrew.</p>
+
+<h2>Install git using <a href="http://brew.sh">Homebrew</a></h2>
+
+<p><a href="http://brew.sh">Homebrew</a> is the missing package manager for Mac OS X. To install
+Homebrew and use <code>brew</code> to install Git, run…</p>
+
+<pre><code class="sh">ruby -e &quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;
+brew install git
+</code></pre>
+
+<p>Test that git is installed and working by running…</p>
+
+<pre><code class="sh">which git
+git --version
+</code></pre>
 
 <h2>Configure git</h2>
 
