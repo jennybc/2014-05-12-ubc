@@ -1,6 +1,14 @@
 Using Git with RStudio
 ======================
 
+Intro to practical version control for scientists
+=================================================
+
+These [slides][slides] are courtesy of [Bernhard Konrad][konrad].
+
+[konrad]: https://github.com/BernhardKonrad
+[slides]: http://htmlpreview.github.io/?https://github.com/BernhardKonrad/2014-02-22-SFU/blob/gh-pages/BK-slides/git-intro.slides.html
+
 Configure [git][git]
 ====================
 
