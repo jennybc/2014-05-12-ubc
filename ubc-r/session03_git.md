@@ -15,23 +15,48 @@ These [slides][slides] are courtesy of [Bernhard Konrad][konrad].
 [konrad]: https://github.com/BernhardKonrad
 [slides]: http://htmlpreview.github.io/?https://github.com/BernhardKonrad/2014-02-22-SFU/blob/gh-pages/BK-slides/git-intro.slides.html
 
+Install [git][git]
+==================
+
+Mac OS 10.9 Mavericks comes with git installed. To check that git is installed,
+open a Terminal and run…
+
+```sh
+➜  which git
+/usr/bin/git
+➜  git --version
+git version 1.9.3
+```
+
+For all other operating systems, go to the [Git downloads][gitdownloads] web
+site, and click on the appropriate icon for your operating system.
+
+[git]: http://git-scm.com
+[gitdownloads]: http://git-scm.com/downloads
+
 Configure [git][git]
 ====================
 
-Open the Terminal and run…
+Git associates your name and e-mail address with each commit, which helps when
+multiple people collaborate on a project. To configure your name and e-mail
+address in git, open the Terminal and run…
 
 ```sh
 git config --global user.name 'Your Name'
 git config --global user.email 'your@email.com'
+```
+
+On a Mac, configure git to remember your password.
+
+```sh
 git config --global credential.helper osxkeychain
 ```
 
-For more help configuring git, see
+For more help configuring git, see…
 
 + [GitHub][setupgit]
 + [UBC STAT 540][stat540]
 
-[git]: http://git-scm.com
 [setupgit]: https://github.com/jennybc/stat540_2014/blob/master/seminars/seminar92_git.md
 [stat540]: https://github.com/jennybc/stat540_2014/blob/master/seminars/seminar92_git.md
 
