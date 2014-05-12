@@ -162,7 +162,12 @@ distributed version control system.</p>
 
 <p>These <a href="http://htmlpreview.github.io/?https://github.com/BernhardKonrad/2014-02-22-SFU/blob/gh-pages/BK-slides/git-intro.slides.html">slides</a> are courtesy of <a href="https://github.com/BernhardKonrad">Bernhard Konrad</a>.</p>
 
-<h1>Install <a href="http://git-scm.com">git</a></h1>
+<h1>Installation and configuration of <a href="http://git-scm.com">git</a></h1>
+
+<p>If you&#39;ve already installed and configured <a href="http://git-scm.com">git</a>, skip ahead to
+<a href="#learngit">Learn to use git with RStudio</a>.</p>
+
+<h2>Install git</h2>
 
 <p>Mac OS 10.9 Mavericks comes with git installed. To check that git is installed,
 open a Terminal and run…</p>
@@ -176,7 +181,7 @@ git version 1.9.3
 <p>For all other operating systems, go to the <a href="http://git-scm.com/downloads">Git downloads</a> web
 site, and click on the appropriate icon for your operating system.</p>
 
-<h1>Configure <a href="http://git-scm.com">git</a></h1>
+<h2>Configure git</h2>
 
 <p>Git associates your name and e-mail address with each commit, which helps when
 multiple people collaborate on a project. To configure your name and e-mail
@@ -198,17 +203,68 @@ git config --global user.email &#39;your@email.com&#39;
 <li><a href="https://github.com/jennybc/stat540_2014/blob/master/seminars/seminar92_git.md">UBC STAT 540</a></li>
 </ul>
 
-<h1>RStudio</h1>
+<p><a name="configurerstudio"></p>
+
+<h2>Configure RStudio to use git</h2>
+
+<p></a></p>
+
+<ul>
+<li>Open RStudio</li>
+<li>Click <em>Tools -&gt; Global Options -&gt; Git/SVN</em></li>
+<li>If <em>Git executable</em> shows <em>(none)</em>, click <em>Browse</em> and select the git
+executable installed on your system
+
+<ul>
+<li>On a Mac, this will likely be one of</li>
+<li><code>/usr/bin/git</code></li>
+<li><code>/usr/local/bin/git</code></li>
+<li><code>/usr/local/git/bin/git</code></li>
+<li>On Windows, <code>git.exe</code> will likely be somewhere in <code>Program Files</code></li>
+</ul></li>
+<li>Click <em>OK</em></li>
+</ul>
+
+<p><a name="learngit"></p>
+
+<h1>Learn to use git with RStudio</h1>
+
+<p></a></p>
 
 <h2>Create a new project</h2>
+
+<p>Or if you prefer, see below for instructions to open an existing project.</p>
 
 <ul>
 <li>Open RStudio</li>
 <li>Create a new project
 
 <ul>
-<li><em>File -&gt; New Project -&gt; New Directory -&gt; Empty Project</em></li>
+<li>Click <em>File -&gt; New Project -&gt; New Directory -&gt; Empty Project</em></li>
 <li>Check <em>Create a git repository for this project</em></li>
+</ul></li>
+</ul>
+
+<h2>Open an existing project</h2>
+
+<ul>
+<li>Open an existing project
+
+<ul>
+<li>Click <em>File -&gt; Open Project</em></li>
+</ul></li>
+</ul>
+
+<p>If you already have a tab labeled <em>Git</em> next to the tabs <em>Environment</em> and
+<em>History</em>, skip these instructions.</p>
+
+<ul>
+<li>Enable git for this project
+
+<ul>
+<li>Click <em>Tools -&gt; Version Control -&gt; Project Setup</em></li>
+<li>Click the dropdown box <em>Version control system</em> and select <em>Git</em></li>
+<li>If you don&#39;t have a <em>Git</em> option go back to <a href="#configurerstudio">Configure RStudio</a>. Do not pass Go. Do not collect $200</li>
 </ul></li>
 </ul>
 
