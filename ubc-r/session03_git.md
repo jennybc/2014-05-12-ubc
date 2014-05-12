@@ -1,6 +1,12 @@
 Using Git with RStudio
 ======================
 
+> Git allows groups of people to work on the same documents (often code)
+at the same time, and without stepping on each other's toes. It's a
+distributed version control system.
+
+(cribbed from [tryGit][trygit])
+
 Intro to practical version control for scientists
 =================================================
 

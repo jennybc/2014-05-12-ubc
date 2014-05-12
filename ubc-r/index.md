@@ -29,6 +29,9 @@ Session 1.2: Care and feeding of R objects
 
 Session 1.3: Version control, introduction
 
+  - Slides: [Intro to practical version control for scientists](http://htmlpreview.github.io/?https://github.com/BernhardKonrad/2014-02-22-SFU/blob/gh-pages/BK-slides/git-intro.slides.html)
+  - [Using Git with RStudio](session03_git.html)
+
 Session 1.4: Making figures using `ggplot2`
 
   - Slides: [slides/session04_ggplot2.pdf](slides/session04_ggplot2.pdf)
