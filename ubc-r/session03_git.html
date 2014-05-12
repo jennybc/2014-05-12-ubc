@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Using Git with RStudio</title>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h1>Using Git with RStudio</h1>
+
+<blockquote>
+<p>Git allows groups of people to work on the same documents (often code)
+at the same time, and without stepping on each other&#39;s toes. It&#39;s a
+distributed version control system.</p>
+</blockquote>
+
+<p>(cribbed from <a href="http://try.github.io">tryGit</a>)</p>
+
+<h1>Intro to practical version control for scientists</h1>
+
+<p>These <a href="http://htmlpreview.github.io/?https://github.com/BernhardKonrad/2014-02-22-SFU/blob/gh-pages/BK-slides/git-intro.slides.html">slides</a> are courtesy of <a href="https://github.com/BernhardKonrad">Bernhard Konrad</a>.</p>
+
+<h1>Configure <a href="http://git-scm.com">git</a></h1>
+
+<p>Open the Terminal and run…</p>
+
+<pre><code class="sh">git config --global user.name &#39;Your Name&#39;
+git config --global user.email &#39;your@email.com&#39;
+git config --global credential.helper osxkeychain
+</code></pre>
+
+<p>For more help configuring git, see</p>
+
+<ul>
+<li><a href="https://github.com/jennybc/stat540_2014/blob/master/seminars/seminar92_git.md">GitHub</a></li>
+<li><a href="https://github.com/jennybc/stat540_2014/blob/master/seminars/seminar92_git.md">UBC STAT 540</a></li>
+</ul>
+
+<h1>RStudio</h1>
+
+<h2>Create a new project</h2>
+
+<ul>
+<li>Open RStudio</li>
+<li>Create a new project
+
+<ul>
+<li><em>File -&gt; New Project -&gt; New Directory -&gt; Empty Project</em></li>
+<li>Check <em>Create a git repository for this project</em></li>
+</ul></li>
+</ul>
+
+<h2>Create and commit a file</h2>
+
+<ul>
+<li>Make your first commit
+
+<ul>
+<li>Click the <em>Git</em> tab</li>
+<li>Check <em>Staged</em> next to <code>.gitignore</code> and <code>hello.Rproj</code></li>
+<li>Click <em>Commit</em></li>
+<li>Type a message in <em>Commit message</em></li>
+<li>Click <em>Commit</em></li>
+</ul></li>
+<li>Create a new Rmd file
+
+<ul>
+<li>Click <em>File -&gt; New File -&gt; R Markdown</em></li>
+<li>Edit the file and change the title</li>
+<li>Save the file</li>
+</ul></li>
+<li>Commit the new Rmd file
+
+<ul>
+<li>Check <em>Staged</em> and click <em>Commit</em></li>
+</ul></li>
+</ul>
+
+<h2>Knit the HTML report</h2>
+
+<ul>
+<li>Knit the Rmd file to generate an HTML report
+
+<ul>
+<li>Click <em>Knit HTML</em></li>
+</ul></li>
+<li>Commit the generated report
+
+<ul>
+<li>Check <em>Staged</em> for the <em>md</em> and <em>html</em> files and the <em>figures</em> directory</li>
+<li>Click <em>Commit</em></li>
+</ul></li>
+</ul>
+
+<h2>Change the plot</h2>
+
+<ul>
+<li>Replace the <em>plot</em> with <em>ggplot</em> or <em>qplot</em> and save your changes</li>
+<li>Commit the change</li>
+<li>Knit the report</li>
+<li>Commit all the modified files</li>
+</ul>
+
+<h2>Make a change and revert it</h2>
+
+<ul>
+<li>Make an erroneous change to the file and save it</li>
+<li>Click <em>Diff</em> and then <em>Revert</em></li>
+<li>The erroneous change has been undone and the previous version restored</li>
+</ul>
+
+<h2>Inspect your work</h2>
+
+<ul>
+<li>Make a few more changes and commits</li>
+<li>Click <em>History</em> under the <em>Git</em> tab to review your day&#39;s work</li>
+<li>Git has recorded a complete history of your work</li>
+<li>In the event of impish gnomes introducing errors into your work, you can
+browse through your history, find the gnome to blame, and restore your
+previous good work. Gnomes be damned.</li>
+</ul>
+
+<h2>Learn the git command line</h2>
+
+<p>Go to <a href="http://try.github.io">tryGit</a> and learn the git command line!</p>
+
+</body>
+
+</html>
