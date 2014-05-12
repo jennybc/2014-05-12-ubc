@@ -121,9 +121,48 @@ Inspect your work
   browse through your history, find the gnome to blame, and restore your
   previous good work. Gnomes be damned.
 
-Learn the git command line
---------------------------
+Use the git command line
+------------------------
 
-Go to [tryGit][tryGit] and learn the git command line!
+There are many graphical interfaces for git—RStudio is one—but there
+is only one git command line interface, which is the common engine
+being used behind the scenes. If your graphical interface ever lets
+you down, it's useful to peak under the hood.
+
++ Click *File -> New File -> Text File*
++ Describe your project in this new file
++ Save this file and name it `README.md`
+  - Case matters! Name the file `README.md` and not `readme.md` or any
+    other variation
+  - Don't be imaginative. Get used to being pedantic. Foster your inner OCD
+  - md is the extension of a [Markdown](markdown) file
+  - Note the yellow question marks indicating the new file that's not
+    being tracked by git
++ Open a shell (also known as a Terminal)
+  - Under the *Git* tab, click *More -> Shell*
++ Stage `README.md` using the git command line
+  - Run `git add README.md`
+  - The yellow question mark changes to a green *A*
+  - Checking the *Staged* check box in fact runs `git add`
++ Unstage `README.md`
+  - Run `git reset README.md`
+  - The green *A* changes back to a yellow question mark
+  - Unchecking the *Staged* check box in fact runs `git reset`
++ Stage and commit `README.md`
+  - Run…
+
+    ```sh
+    git add README.md
+    git commit -m 'Add README.md'
+    ```
+  - The `-m` option of `git commit` specifies the git log message
++ Browse the git history in RStudio, and inspect this commit
+
+[markdown]: https://help.github.com/articles/markdown-basics
+
+Learn more about the git command line
+-------------------------------------
+
+Go to [tryGit][tryGit] and learn more about the git command line!
 
 [tryGit]: http://try.github.io
