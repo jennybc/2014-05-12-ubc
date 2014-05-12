@@ -182,6 +182,17 @@ Make a change and revert it
 + Click *Diff* and then *Revert*
 + The erroneous change has been undone and the previous version restored
 
+Delete a file
+-------------
+
++ Create a new file named `doomed.md`
++ Enter some text and save it
++ Delete this doomed file
+  - Under the *Files* tab check the box next to `doomed.md`
+  - Click *Delete*
++ Under the *Git* tab, a red `D` appears next to the deleted file
++ Stage the change by clicking the checkbox and commit it
+
 Inspect your work
 -----------------
 
