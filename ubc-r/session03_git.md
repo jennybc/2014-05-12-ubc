@@ -15,8 +15,16 @@ These [slides][slides] are courtesy of [Bernhard Konrad][konrad].
 [konrad]: https://github.com/BernhardKonrad
 [slides]: http://htmlpreview.github.io/?https://github.com/BernhardKonrad/2014-02-22-SFU/blob/gh-pages/BK-slides/git-intro.slides.html
 
-Install [git][git]
-==================
+Installation and configuration of [git][git]
+============================================
+
+If you've already installed and configured [git][git], skip ahead to
+[Learn to use git with RStudio](#learngit).
+
+[git]: http://git-scm.com
+
+Install git
+-----------
 
 Mac OS 10.9 Mavericks comes with git installed. To check that git is installed,
 open a Terminal and run…
@@ -31,11 +39,10 @@ git version 1.9.3
 For all other operating systems, go to the [Git downloads][gitdownloads] web
 site, and click on the appropriate icon for your operating system.
 
-[git]: http://git-scm.com
 [gitdownloads]: http://git-scm.com/downloads
 
-Configure [git][git]
-====================
+Configure git
+-------------
 
 Git associates your name and e-mail address with each commit, which helps when
 multiple people collaborate on a project. To configure your name and e-mail
@@ -60,16 +67,50 @@ For more help configuring git, see…
 [setupgit]: https://github.com/jennybc/stat540_2014/blob/master/seminars/seminar92_git.md
 [stat540]: https://github.com/jennybc/stat540_2014/blob/master/seminars/seminar92_git.md
 
-RStudio
-=======
+<a name="configurerstudio">
+Configure RStudio to use git
+----------------------------
+</a>
+
++ Open RStudio
++ Click *Tools -> Global Options -> Git/SVN*
++ If *Git executable* shows *(none)*, click *Browse* and select the git
+  executable installed on your system
+  - On a Mac, this will likely be one of
+    - `/usr/bin/git`
+    - `/usr/local/bin/git`
+    - `/usr/local/git/bin/git`
+  - On Windows, `git.exe` will likely be somewhere in `Program Files`
++ Click *OK*
+
+<a name="learngit">
+Learn to use git with RStudio
+=============================
+</a>
 
 Create a new project
 --------------------
 
+Or if you prefer, see below for instructions to open an existing project.
+
 + Open RStudio
 + Create a new project
-  - *File -> New Project -> New Directory -> Empty Project*
+  - Click *File -> New Project -> New Directory -> Empty Project*
   - Check *Create a git repository for this project*
+
+Open an existing project
+------------------------
+
++ Open an existing project
+  - Click *File -> Open Project*
+
+If you already have a tab labeled *Git* next to the tabs *Environment* and
+*History*, skip these instructions.
+
++ Enable git for this project
+  - Click *Tools -> Version Control -> Project Setup*
+  - Click the dropdown box *Version control system* and select *Git*
+  - If you don't have a *Git* option go back to [Configure RStudio](#configurerstudio). Do not pass Go. Do not collect $200
 
 Create and commit a file
 ------------------------
