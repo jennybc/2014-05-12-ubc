@@ -30,6 +30,13 @@ Mac OS 10.9 Mavericks comes with git installed. To check that git is installed,
 open a Terminal and run…
 
 ```sh
+which git
+git --version
+```
+
+These commands should display something similar to this:
+
+```sh
 ➜  which git
 /usr/bin/git
 ➜  git --version
@@ -39,7 +46,30 @@ git version 1.9.3
 For all other operating systems, go to the [Git downloads][gitdownloads] web
 site, and click on the appropriate icon for your operating system.
 
+If on a Mac the official Git package gives you any trouble, use the following
+instructions to install Git using Homebrew.
+
 [gitdownloads]: http://git-scm.com/downloads
+
+Install git using [Homebrew][homebrew]
+--------------------------------------
+
+[Homebrew][homebrew] is the missing package manager for Mac OS X. To install
+Homebrew and use `brew` to install Git, run…
+
+```sh
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+brew install git
+```
+
+Test that git is installed and working by running…
+
+```sh
+which git
+git --version
+```
+
+[homebrew]: http://brew.sh
 
 Configure git
 -------------
