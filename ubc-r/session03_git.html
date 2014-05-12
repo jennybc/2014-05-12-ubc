@@ -162,16 +162,36 @@ distributed version control system.</p>
 
 <p>These <a href="http://htmlpreview.github.io/?https://github.com/BernhardKonrad/2014-02-22-SFU/blob/gh-pages/BK-slides/git-intro.slides.html">slides</a> are courtesy of <a href="https://github.com/BernhardKonrad">Bernhard Konrad</a>.</p>
 
+<h1>Install <a href="http://git-scm.com">git</a></h1>
+
+<p>Mac OS 10.9 Mavericks comes with git installed. To check that git is installed,
+open a Terminal and run…</p>
+
+<pre><code class="sh">➜  which git
+/usr/bin/git
+➜  git --version
+git version 1.9.3
+</code></pre>
+
+<p>For all other operating systems, go to the <a href="http://git-scm.com/downloads">Git downloads</a> web
+site, and click on the appropriate icon for your operating system.</p>
+
 <h1>Configure <a href="http://git-scm.com">git</a></h1>
 
-<p>Open the Terminal and run…</p>
+<p>Git associates your name and e-mail address with each commit, which helps when
+multiple people collaborate on a project. To configure your name and e-mail
+address in git, open the Terminal and run…</p>
 
 <pre><code class="sh">git config --global user.name &#39;Your Name&#39;
 git config --global user.email &#39;your@email.com&#39;
-git config --global credential.helper osxkeychain
 </code></pre>
 
-<p>For more help configuring git, see</p>
+<p>On a Mac, configure git to remember your password.</p>
+
+<pre><code class="sh">git config --global credential.helper osxkeychain
+</code></pre>
+
+<p>For more help configuring git, see…</p>
 
 <ul>
 <li><a href="https://github.com/jennybc/stat540_2014/blob/master/seminars/seminar92_git.md">GitHub</a></li>
