@@ -282,9 +282,64 @@ browse through your history, find the gnome to blame, and restore your
 previous good work. Gnomes be damned.</li>
 </ul>
 
-<h2>Learn the git command line</h2>
+<h2>Use the git command line</h2>
 
-<p>Go to <a href="http://try.github.io">tryGit</a> and learn the git command line!</p>
+<p>There are many graphical interfaces for git—RStudio is one—but there
+is only one git command line interface, which is the common engine
+being used behind the scenes. If your graphical interface ever lets
+you down, it&#39;s useful to peak under the hood.</p>
+
+<ul>
+<li>Click <em>File -&gt; New File -&gt; Text File</em></li>
+<li>Describe your project in this new file</li>
+<li>Save this file and name it <code>README.md</code>
+
+<ul>
+<li>Case matters! Name the file <code>README.md</code> and not <code>readme.md</code> or any
+other variation</li>
+<li>Don&#39;t be imaginative. Get used to being pedantic. Foster your inner OCD</li>
+<li>md is the extension of a <a href="markdown">Markdown</a> file</li>
+<li>Note the yellow question marks indicating the new file that&#39;s not
+being tracked by git</li>
+</ul></li>
+<li>Open a shell (also known as a Terminal)
+
+<ul>
+<li>Under the <em>Git</em> tab, click <em>More -&gt; Shell</em></li>
+</ul></li>
+<li>Stage <code>README.md</code> using the git command line
+
+<ul>
+<li>Run <code>git add README.md</code></li>
+<li>The yellow question mark changes to a green <em>A</em></li>
+<li>Checking the <em>Staged</em> check box in fact runs <code>git add</code></li>
+</ul></li>
+<li>Unstage <code>README.md</code>
+
+<ul>
+<li>Run <code>git reset README.md</code></li>
+<li>The green <em>A</em> changes back to a yellow question mark</li>
+<li>Unchecking the <em>Staged</em> check box in fact runs <code>git reset</code></li>
+</ul></li>
+<li><p>Stage and commit <code>README.md</code></p>
+
+<ul>
+<li>Run…</li>
+</ul>
+
+<pre><code class="sh">git add README.md
+git commit -m &#39;Add README.md&#39;
+</code></pre>
+
+<ul>
+<li>The <code>-m</code> option of <code>git commit</code> specifies the git log message</li>
+</ul></li>
+<li><p>Browse the git history in RStudio, and inspect this commit</p></li>
+</ul>
+
+<h2>Learn more about the git command line</h2>
+
+<p>Go to <a href="http://try.github.io">tryGit</a> and learn more about the git command line!</p>
 
 </body>
 
