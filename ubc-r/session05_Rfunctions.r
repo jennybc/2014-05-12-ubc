@@ -31,7 +31,8 @@ max_minus_min(runif(1000))
 
 ## for functions you use alot or distribute, you might want to check the
 ## argument are valid!
-max_minus_min("hello world")
+## uncomment this during session
+#max_minus_min("hello world")
 
 ## the max and min are extreme examples of a quantile
 ## median = 0.5 quantile
@@ -63,7 +64,8 @@ quantile_diff <- function(x, probs) {
   return(max(the_quantiles) - min(the_quantiles))
 }
 
-quantile_diff(gDat$lifeExp) ## oops! must specify probs argument
+## uncomment this during session
+#quantile_diff(gDat$lifeExp) ## oops! must specify probs argument
 quantile_diff(gDat$lifeExp, probs = c(0.25, 0.75))
 
 ## can you use our new function to take the difference between the max a min?

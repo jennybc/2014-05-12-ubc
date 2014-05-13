@@ -46,7 +46,7 @@ Session 1.4: Making figures using `ggplot2`
 
 Session 2.1: Writing functions
 
-  - [Writing functions](session05_Rfunctions.r)
+  - [Writing functions](session05_Rfunctions.html)
 
 Session 2.2: Data aggregation, including plyr
 
