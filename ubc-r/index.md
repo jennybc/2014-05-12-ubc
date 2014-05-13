@@ -60,6 +60,7 @@ Session 2.3: The shell, focus on file inspection and manipulation
 Session 2.4: Version control, cont'd
 
   - [Getting Started with GitHub](session2.4_github.html)
+  - What we drew on whiteboard: [slides/session07_dataAggregation.pdf](slides/session07_git-github-rstudio.pdf)
 
 Session 2.5: Creating workflows and automated pipelines
 

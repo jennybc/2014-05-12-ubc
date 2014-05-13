@@ -28,3 +28,4 @@ lessons/misc-r/full-R-bootcamp/testing-documentation/testing.md
 *.Rproj
 .RData
 *.xlsx
+*.key
