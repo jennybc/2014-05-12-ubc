@@ -54,6 +54,7 @@ Session 2.2: Data aggregation, including plyr
   - [`plyr` webpage](http://plyr.had.co.nz)
   - [Data aggregation](http://www.stat.ubc.ca/~jenny/STAT545A/block04_dataAggregation.html) -- [source](https://github.com/jennybc/STAT545A/blob/master/block04_dataAggregation.rmd)
   - [Data aggregation section](http://www.ugrad.stat.ubc.ca/~stat540/seminars/seminar04_compileNotebook-dataAggregation-twoGroupComparison.html#what-is-data-aggregation) of a tutorial from [STAT 540](http://www.ugrad.stat.ubc.ca/~stat540/)
+  - A [Gist](https://gist.github.com/jennybc/697d3ede1a09682c2fb7#file-much_country-r) with R code that uses `plyr` to generate two files per country
   
 Session 2.3: The shell, focus on file inspection and manipulation
 
