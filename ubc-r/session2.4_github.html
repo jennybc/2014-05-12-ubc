@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Getting Started with GitHub</title>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h1>Getting Started with GitHub</h1>
+
+<ul>
+<li>Register an <a href="https://education.github.com">educational GitHub account</a> if you qualify,
+and a <a href="https://github.com">regular account</a> otherwise
+
+<ul>
+<li>A GitHub educational account gives you five private repositories
+for free</li>
+<li>Public repositories are always free</li>
+</ul></li>
+<li>Upload a photo of your self to <a href="http://gravatar.com">Gravatar</a> if you&#39;re
+comfortable with that</li>
+</ul>
+
+<h1>GitHub Documentation</h1>
+
+<p>GitHub has great documentation on both git and GitHub.</p>
+
+<ul>
+<li><a href="https://help.github.com/">GitHub Help</a></li>
+<li><a href="https://help.github.com/articles/set-up-git">Set Up Git</a></li>
+<li><a href="https://help.github.com/articles/create-a-repo">Create a Repository</a></li>
+<li><a href="https://help.github.com/articles/fetching-a-remote">Fetching a Remote</a></li>
+</ul>
+
+<h1>Create a new RStudio project on GitHub</h1>
+
+<ul>
+<li>Open <a href="https://github.com">GitHub</a> in your web browser</li>
+<li>Create a <a href="https://github.com/new">new repository</a>
+
+<ul>
+<li>Enter a name and description</li>
+<li>Check <em>Initialize this repository with a README</em></li>
+<li>Click <em>Create repository</em></li>
+</ul></li>
+<li><a href="https://help.github.com/articles/fetching-a-remote">Copy the repository URL</a> of your project to the clipboard
+by clicking the <em>Copy to clipboard</em> icon next to <em>HTTPS clone URL</em>
+on the right-hand side of the project page</li>
+<li>Open RStudio</li>
+<li>Create a new project
+
+<ul>
+<li>Click <em>File -&gt; New Project -&gt; Version Control -&gt; Git</em></li>
+<li>Paste the repository URL from the clipboard into <em>Repository URL</em></li>
+<li>Click <em>Create Project</em></li>
+</ul></li>
+<li>Stage the files <code>.gitignore</code> and <code>project.Rproj</code></li>
+<li>Commit these files and push them to GitHub
+
+<ul>
+<li>Click <em>Commit</em></li>
+<li>Click <em>Pull</em> and it should respond <em>Already up to date</em></li>
+<li>Enter a log message and click <em>Commit</em></li>
+<li>Click <em>Push</em></li>
+<li>Get in the habit of always clicking <em>Pull</em> before commit</li>
+<li>It will prevent conflicts and save you grief</li>
+</ul></li>
+<li>Reload this repository in your web browser and look for these two files</li>
+<li>Edit <code>README.md</code> and add an informative title and description</li>
+<li>Commit <code>README.md</code></li>
+<li>Push this commit to GitHub (remember to pull first!)</li>
+<li>Reload this repository in your web browser and appreciate your beautifully
+rendered <code>README.md</code></li>
+</ul>
+
+<h1>Push an existing RStudio project to GitHub</h1>
+
+<ul>
+<li>Open <a href="https://github.com">GitHub</a> in your web browser</li>
+<li>Create a <a href="https://github.com/new">new repository</a>
+
+<ul>
+<li>Give the repository the same name as your RStudio project</li>
+<li>Do <strong><em>not</em></strong> check <em>Initialize this repository with a README</em></li>
+<li>Click <em>Create Project</em></li>
+</ul></li>
+<li>Copy the two lines of code from the box labeled
+<em>Push an existing repository from the command line</em></li>
+<li>Open an existing project in RStudio
+
+<ul>
+<li>Look for the <em>Git</em> tab to ensure it&#39;s already using git</li>
+</ul></li>
+<li>Open a shell by clicking <em>Tools -&gt; Shell</em></li>
+<li><p>Paste the two lines of code that you copied into the shell</p>
+
+<pre><code class="sh">git remote add origin https://github.com/USERNAME/PROJECT.git
+git push -u origin master
+</code></pre></li>
+<li><p>Reload this repository in your web browser and browse through your
+handiwork</p>
+
+<ul>
+<li>Click on individual files to see their content</li>
+<li>Click on <em>commits</em> to see your history of commits</li>
+</ul></li>
+<li><p>Push your project to GitHub</p>
+
+<ul>
+<li>Click <em>More -&gt; Push Branch</em></li>
+</ul></li>
+<li><p>Edit <code>README.md</code> and commit the change</p>
+
+<ul>
+<li>Remember the mantra: pull, commit, push</li>
+</ul></li>
+<li><p>Reload this repository in your web browser and look for your recent
+change</p></li>
+<li><p>In your GitHub web browser, edit the file <code>README.md</code></p>
+
+<ul>
+<li>Click on <code>README.md</code></li>
+<li>Click <em>Edit</em> and make a change</li>
+<li>Click <em>Commit changes</em></li>
+</ul></li>
+<li><p>In RStudio, pull this change from GitHub</p>
+
+<ul>
+<li>Click <em>More -&gt; Pull Branches</em></li>
+<li>Look for your recent change in RStudio</li>
+</ul></li>
+</ul>
+
+<h1>Learn to use git at the command line</h1>
+
+<p>Learning to use git at the command line is a useful skill to get
+yourself out of sticky situations involving conflicts and merges.</p>
+
+<p><a href="http://try.github.io/">tryGit</a> is a fantastic interactive tutorial for learning to
+use git at the command line.</p>
+
+<h1>Further Reading</h1>
+
+<h2><a href="http://www.phdcomics.com/comics/archive.php?comicid=1531">PHD Comics - &ldquo;FINAL&rdquo;.doc</a></h2>
+
+<p><img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" alt="&quot;FINAL&quot;.doc"/></p>
+
+<h2><a href="http://xkcd.com/1296/">XKCD - Git Commit</a></h2>
+
+<p><img src="http://imgs.xkcd.com/comics/git_commit.png" alt="Git Commit"/></p>
+
+<ul>
+<li><a href="http://www.rstudio.com/ide/docs/version_control/overview">Using Version Control with RStudio</a></li>
+<li><a href="http://kbroman.github.io/github_tutorial/">An introduction to Git/Github</a>
+by Karl Broman, aimed at stats / data science types</li>
+<li>Ram, K 2013. Git can facilitate greater reproducibility and
+increased transparency in science. Source Code for Biology and
+Medicine 2013 8:7. Go to the
+<a href="https://github.com/karthikram/smb_git">associated github repo</a>
+to get the PDF (link at bottom of README) and to see a great example
+of how someone managed the process of writing a manuscript with
+git(hub).</li>
+<li>Blog post <a href="http://blogs.biomedcentral.com/bmcblog/2013/02/28/version-control-for-scientific-research/">Version control for scientific research</a>
+by Karthik Ram and Titus Brown on the BioMed Central blog February 28</li>
+<li>Blog post <a href="http://chronicle.com/blogs/profhacker/getting-started-with-a-github-repository">Getting Started With a GitHub Repository</a>
+from ProfHacker on chronicle.com looks helpful</li>
+<li>Blog post from The Molecular Ecologist on
+<a href="http://www.molecularecologist.com/2013/11/using-github-with-r-and-rstudio/">using GitHub with R and RStudio</a></li>
+</ul>
+
+</body>
+
+</html>
