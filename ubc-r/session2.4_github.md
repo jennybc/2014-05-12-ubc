@@ -27,6 +27,26 @@ GitHub has great documentation on both git and GitHub.
 [ghcreate]: https://help.github.com/articles/create-a-repo
 [ghclone]: https://help.github.com/articles/fetching-a-remote
 
+Set up git
+==========
+
+Configure your name and email address if you haven't already.
+
+Open a terminal and run…
+
+```sh
+git config --global user.name "Your Name Here"
+git config --global user.email "your_email@example.com"
+```
+
+On a Mac, also run…
+
+```sh
+git config --global credential.helper osxkeychain
+```
+
+GitHub has [more detailed instructions][ghsetup] on setting up git.
+
 Create a new RStudio project on GitHub
 ======================================
 
