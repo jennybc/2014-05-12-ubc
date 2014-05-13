@@ -20,6 +20,9 @@ Session 1.1: Basics of the R working environment and language
 
   - Slides: [slides/session01_bootcamp-deep-thoughts.pdf](slides/session01_bootcamp-deep-thoughts.pdf)
   - [R basics, workspace and working directory, RStudio projects](http://www.stat.ubc.ca/~jenny/STAT545A/block01_basicsWorkspaceWorkingDirProject.html) -- [source](https://github.com/jennybc/STAT545A/blob/master/block01_basicsWorkspaceWorkingDirProject.rmd)
+  - What does it mean to "write data for computers"?
+    - Nine simple ways to make it easier to (re)use your data by Ethan P White, Elita Baldridge, Zachary T. Brym, Kenneth J. Locey, Daniel J. McGlinn, Sarah R. Supp. Ideas in Ecology and Evolution 6(2): 1–10, 2013. doi:10.4033/iee.2013.6b.6.f <http://library.queensu.ca/ojs/index.php/IEE/article/view/4608>. Section 4 "Use Standard Data Formats" is especially good reading.
+    - Tidy data by Hadley Wickham. Submitted to The Journal of Statistical Software. Preprint available <http://vita.had.co.nz/papers/tidy-data.pdf>.  
   
 Session 1.2: Care and feeding of R objects
 
