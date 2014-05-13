@@ -27,3 +27,4 @@ lessons/misc-r/full-R-bootcamp/testing-documentation/testing.md
 .Rproj.user
 *.Rproj
 .RData
+*.xlsx
