@@ -46,8 +46,7 @@ Session 1.4: Making figures using `ggplot2`
 
 Session 2.1: Writing functions
 
-  - [Writing functions](session06_Rfunctions.html)
-
+  - [Writing functions](session05_Rfunctions.r)
 
 Session 2.2: Data aggregation, including plyr
 
@@ -56,7 +55,7 @@ Session 2.2: Data aggregation, including plyr
   - [Data aggregation](http://www.stat.ubc.ca/~jenny/STAT545A/block04_dataAggregation.html) -- [source](https://github.com/jennybc/STAT545A/blob/master/block04_dataAggregation.rmd)
   - [Data aggregation section](http://www.ugrad.stat.ubc.ca/~stat540/seminars/seminar04_compileNotebook-dataAggregation-twoGroupComparison.html#what-is-data-aggregation) of a tutorial from [STAT 540](http://www.ugrad.stat.ubc.ca/~stat540/)
   
-Session 2.2: The shell, focus on file inspection and manipulation
+Session 2.3: The shell, focus on file inspection and manipulation
 
 Session 2.4: Version control, cont'd
 
