@@ -1,5 +1,3 @@
-setwd("~/teaching//swc//2014-05-12-ubc//ubc-r")
-
 gDat <- read.delim("gapminderDataFiveYear.txt")
 str(gDat) # 'data.frame':  1704 obs. of  6 variables:
 
@@ -19,6 +17,7 @@ rownames(tDat) <- with(gDat, year[country == "Canada"])
 str(tDat)
 tDat
 
+## optional:
 ## reshape2 -- worth learning for future
 library(reshape2)
 library(plyr) # to use '.' to quote an expression
@@ -57,12 +56,16 @@ aggregate(country ~ continent, gDat, function(x) length(unique(x)))
 ## exercise
 ## compute the min and max of gdpPercap by country for 4 countries of your choice
 
+## let's develop a few more challenges on the fly
+
 ## compute on a data.frame, split out by a factor
 ## install.packages("plyr", dependencies = TRUE)
 library(plyr)
 
 ## let's run linear regression of lifeExp on year for individual countries and
 ## save the estimated intercept and slope
+
+## hey! we already wrote this function!
 
 ## walk before you run .... and make a plot first!
 library(ggplot2)
@@ -71,20 +74,15 @@ ggplot(subset(gDat, country == "Zimbabwe"),
   geom_point() + geom_smooth(se = FALSE, method = "lm")
 
 lm(lifeExp ~ year, gDat, subset = country == "Zimbabwe")
+lm(lifeExp ~ I(year - 1952), gDat, subset = country == "Zimbabwe")
 
-## let's make the intercept more interpretable
-(yearMin <- min(gDat$year))
-lm(lifeExp ~ I(year - yearMin), gDat, subset = country == "Zimbabwe")
-jFit <- lm(lifeExp ~ I(year - yearMin), gDat, subset = country == "Zimbabwe")
-coef(jFit)
-
-## package your working protoype code in a function
-jFun <- function(z) {
-  jCoef <- coef(lm(lifeExp ~ I(year - yearMin), z))
-  names(jCoef) <- c("intercept", "slope")
-  return(jCoef)
+## copy and paste function from previous session
+jFun <- function(x, shift = 1952) {
+  fit <- lm( lifeExp ~ I(year - shift), data = x)
+  fit.coef <- coef(fit)
+  names(fit.coef) <- c("intercept","slope")
+  return(fit.coef)
 }
-## we are being a bit naughty when we use yearMin from the calling environment
 
 ## test your function!
 jFun(subset(gDat, country == "Zimbabwe"))
@@ -97,7 +95,6 @@ str(gCoef)
 tail(gCoef)
 
 ## I wish that I also had the continent info
-## two ways to get that:
 
 ## easiest:
 ## sort of a trick: add continent to the ddply call
@@ -105,18 +102,12 @@ gCoef <- ddply(gDat, ~ country + continent, jFun)
 str(gCoef)
 tail(gCoef)
 
+## optional:
 ## some exploration of slopes
 ggplot(gCoef, aes(x = intercept, y = slope)) + geom_point()
 ggplot(gCoef, aes(x = intercept, y = slope, color = continent)) + geom_point()
 ggplot(gCoef, aes(x = continent, y = slope)) + 
   geom_jitter(position = position_jitter(width = 0.1))
-
-## optional ... not sure this adds enough to merit showing?
-leSlopeByCont <-
-  ddply(gCoef, ~ continent,
-        function(z) c(minSlope = min(z$slope), medSlope = median(z$slope),
-                      maxSlope = max(z$slope)))
-leSlopeByCont
 
 ## data aggregation activities to leave many file behind as fodder for shell
 ## session
