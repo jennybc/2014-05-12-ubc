@@ -59,6 +59,8 @@ Session 2.3: The shell, focus on file inspection and manipulation
 
 Session 2.4: Version control, cont'd
 
+  - [Getting Started with GitHub](session2.4_github.html)
+
 Session 2.5: Creating workflows and automated pipelines
 
   - Slides: [slides/session08_pipeline.pdf](slides/session08_pipeline.pdf)
